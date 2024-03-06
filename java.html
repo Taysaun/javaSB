@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaBank</title>
+    <link href="design.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="amountBox">
+    </div>
+    <div id="deposits" > <!--Designated area for adding money-->
+        <div class="input">
+            <input type="value" placeholder="submit paycheck" id="payAmount">
+            <button onclick="addMoney(); depositLog()">Submit</button>
+        </div>
+        <button onclick="undo(); depositLog()">Undo last deposit</button>
+        <div id="lastDeposit">
+        </div>
+        <div class="name" id="nameDep">Deposit Log:</div>
+        <div id="depositLog"></div>
+    </div>
+    <div id="Expenses"> <!--Designated area for deducting money-->
+        <p>To remove, input an existing description and click the <b>Remove</b> button</p>
+        <p>Apply a single expense to the balance by inputing an existing description and clicking <b>Apply</b></p>
+        <div class="input">
+            <input type="value" placeholder="submit expense" id="expenseAmount">
+            <input type="text" placeholder="description" maxlength=30 id="description">
+            <button onclick="newExpense(); expenseLog()">Submit</button>
+            <button onclick="removeItem(); expenseLog()">Remove</button>
+            <button onclick="applyOne(); removeItem(); expenseLog()">Apply</button>
+        </div>
+        <div class="name" id="nameExp">Expense Log:</div>
+        <div id="expenseLog"></div>
+        <button onclick="applyAll(); expenseLog()">Apply All to Balance</button>
+    </div>
+    <script src="pr.js"></script>
+</body>
+</html>
