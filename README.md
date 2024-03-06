@@ -1,3 +1,4 @@
+Fork this repository and make a clone on your local computer.
 Once downloaded, open a command line and navigate to the project directory.
 Type "npm i" then enter.
 Type "node server" then enter.
